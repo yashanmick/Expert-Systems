@@ -1,0 +1,22 @@
+These are two versions of the HVAC control system from part 5 of "Jess
+in Action:" The initial, non-fuzzy version and the final fuzzy-logic
+version." The Java code for each of these is included in a Java
+package. The non-fuzzy version is in package "control" and the fuzzy
+version is in "fuzzy". 
+
+To execute the non-fuzzy example, assuming jess.jar is on your
+classpath, you can just type 
+
+   java jess.Main control/control.clp
+
+To run the fuzzy example, you'll need to get the FuzzyJ toolkit from
+http://www.iit.nrc.ca/IR_public/fuzzy/fuzzyJToolkit.html . Download
+the software, unzip the file into a directory named "fuzzy", and
+determine the name of the main JAR file (currently named
+fuzzy/fuzzyJ15a.jar). Add this JAR file to your classpath. You can
+then run the fuzzy example using
+
+  jave nrc.fuzzy.jess.FuzzyMain fuzzy/control.clp
+
+There is a DOS batch file fuzzy/control.bat which you may wish to
+modify and use to run this example.

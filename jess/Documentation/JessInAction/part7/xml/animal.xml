@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE rulebase SYSTEM "jess.dtd">
+<rulebase> 
+  <rule name="AnimalRule1" priority="10">
+    <lhs>
+      <pattern name="animal" binding="animal">
+        <slot name="has-hair">
+          <constant>TRUE</constant>
+        </slot>
+      </pattern>
+    </lhs>
+    <rhs>
+      <function-call>
+        <head>modify</head>
+        <variable>animal</variable>
+        <constant>(type mammal)</constant>
+      </function-call>
+    </rhs>
+  </rule>
+</rulebase>

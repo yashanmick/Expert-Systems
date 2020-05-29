@@ -1,0 +1,9 @@
+Examples for part 6 of "Jess in Action"
+
+The directory hello contains the Hello and HelloJess servlets from
+chapter 19, sections 19.1 through 19.3. See the text for information
+about deploying them in Tomcat or another web application server.
+
+The directory "order" contains the complete Recommendations Agent web
+application. Again, you'll need to consult the text for information
+about installing these in a servlet container.

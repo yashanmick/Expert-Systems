@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE rulebase SYSTEM "jess.dtd">
+
+  <rulebase> 
+    <rule name="RuleName" priority="1">
+      <lhs>
+        <pattern name="number" binding="Y">
+          <slot name="value">
+            <variable name="x"/>    
+            <function-call>
+              <head>or</head>
+              <function-call>
+                <head>=</head>
+                <variable name="x"/>
+                <constant>2</constant>
+              </function-call>
+              <function-call>
+                <head>=</head>
+                <variable name="x"/>
+                <constant>3</constant>
+              </function-call>
+            </function-call>
+          </slot>
+        </pattern>
+        <group name="not">
+          <pattern name="number">
+            <slot name="value">
+            <constant>3</constant>
+            </slot>
+          </pattern>
+        </group>      
+      </lhs>
+      <rhs>    
+        <function-call>
+          <head>printout</head>
+          <constant>t</constant>
+          <variable name="x"/>
+          <constant>crlf</constant>
+        </function-call>
+      </rhs>
+    </rule>
+  </rulebase>
+  

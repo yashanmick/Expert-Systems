@@ -1,0 +1,25 @@
+<!-- XML DTD for Jess rules -->
+
+<!ELEMENT rulebase (rule)*>
+<!ELEMENT rule (lhs,rhs)>
+<!ATTLIST rule name CDATA #REQUIRED priority CDATA "">
+
+<!ELEMENT rhs (function-call)*>
+<!ELEMENT lhs (group | pattern)*>
+
+<!ELEMENT group (group | pattern)*>
+<!ATTLIST group name CDATA #REQUIRED>
+
+<!ELEMENT pattern (slot*)>
+<!ATTLIST pattern name CDATA #REQUIRED binding CDATA "">
+
+<!ELEMENT slot (variable | constant | function-call)*>
+<!ATTLIST slot name CDATA #REQUIRED>
+
+<!ELEMENT variable EMPTY>
+<!ATTLIST variable name CDATA #REQUIRED>
+
+<!ELEMENT function-call (head,(constant|variable|function-call)*)>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT constant (#PCDATA)>
+

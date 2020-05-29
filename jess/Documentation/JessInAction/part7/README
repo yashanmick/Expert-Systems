@@ -1,0 +1,6 @@
+This directory contains code examples from part 7 of "Jess in Action."
+
+The directory "xml" contains several XML-related example files from
+chapter 20. The directory "rmi" contains the RMI rule server from
+chapter 21 (including a Makefile you can use to recompile it.) See the
+text for details about these files.

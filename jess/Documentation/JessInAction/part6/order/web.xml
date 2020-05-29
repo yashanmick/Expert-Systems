@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <context-param>
+        <param-name>rulesfile</param-name>
+        <param-value>tekmart.clp</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>factsfile</param-name>
+        <param-value>/home/ejfried/tekmart/data</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>Catalog</servlet-name>
+        <servlet-class>Catalog</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>Recommend</servlet-name>
+        <servlet-class>Recommend</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Purchase</servlet-name>
+        <servlet-class>Purchase</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>
+            Catalog
+        </servlet-name>
+        <url-pattern>
+            /catalog
+        </url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>
+            Recommend
+        </servlet-name>
+        <url-pattern>
+            /recommend
+        </url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>
+            Purchase
+        </servlet-name>
+        <url-pattern>
+            /purchase
+        </url-pattern>
+    </servlet-mapping>
+</web-app>
