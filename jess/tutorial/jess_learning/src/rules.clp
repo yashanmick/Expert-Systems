@@ -69,11 +69,11 @@
   "Check that the answer has the right form"
   (if (eq ?type yes-no) then
     (return (or (eq ?answer yes) (eq ?answer no)))
-  else 
     (if (eq ?type number) then
       (return (numberp ?answer)))
     else 
-      (return (> (str-length ?answer) 0))))
+      (return (> (str-length ?answer) 0)))
+  )
    
 (defrule ask::ask-question-by-id
   "Given the identifier of a question, ask it and assert the answer"

@@ -61,7 +61,7 @@
   (while (not (is-of-type ?answer ?type)) do
          (printout t ?question " ")
          (if (eq ?type yes-no) then
-           (printout t "(yes or no) "))
+            (printout t "(yes or no) "))
          (bind ?answer (read)))
   (return ?answer))
 
@@ -69,8 +69,8 @@
   "Check that the answer has the right form"
   (if (eq ?type yes-no) then
     (return (or (eq ?answer yes) (eq ?answer no)))
-    else (if (eq ?type number) then
-           (return (numberp ?answer)))
+    (if (eq ?type number) then
+            (return (numberp ?answer)))
     else (return (> (str-length ?answer) 0))))
    
 (defrule ask::ask-question-by-id
